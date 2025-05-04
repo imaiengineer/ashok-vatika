@@ -82,7 +82,7 @@ const Home = () => {
               <Typography variant="body1">
                 <strong>Email:</strong>{" "}
                 <a
-                  href="mailto:ashok.kumar@ashokvatika.com"
+                  href="mailto:ashokvatika.green.services@gmail.com"
                   style={{ color: "#1976d2", textDecoration: "none", wordBreak: "break-word" }}
                 >
                   ashokvatika.green.services@gmail.com
