@@ -8,25 +8,34 @@ const Home = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          backgroundImage: "url('/Assets/images/GardenBackGround.jpg')", // 👈 Updated image path
+          backgroundImage: "url('/Assets/images/GardenBackGround.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          minHeight: "60vh",
+          minHeight: { xs: "50vh", sm: "60vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           color: "white",
           textAlign: "center",
-          p: 4,
+          px: 2,
+          py: { xs: 4, sm: 6 },
           backgroundColor: "rgba(0,0,0,0.4)",
           backgroundBlendMode: "darken",
         }}
       >
-        <Box>
-          <Typography variant="h3" gutterBottom>
+        <Box sx={{ maxWidth: "90%" }}>
+          <Typography
+            variant="h3"
+            gutterBottom
+            sx={{ fontSize: { xs: "2rem", sm: "3rem" } }}
+          >
             Welcome to AshokVatika 🌿
           </Typography>
-          <Typography variant="h6" gutterBottom>
+          <Typography
+            variant="h6"
+            gutterBottom
+            sx={{ fontSize: { xs: "1rem", sm: "1.25rem" } }}
+          >
             Where greenery meets serenity. Discover our premium nursery plantation.
           </Typography>
           <Button
@@ -42,11 +51,15 @@ const Home = () => {
       </Box>
 
       {/* About Summary */}
-      <Container sx={{ py: 6 }}>
-        <Typography variant="h4" gutterBottom>
+      <Container sx={{ py: { xs: 4, sm: 6 } }}>
+        <Typography
+          variant="h4"
+          gutterBottom
+          sx={{ fontSize: { xs: "1.5rem", sm: "2rem" } }}
+        >
           About Us
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" paragraph sx={{ fontSize: { xs: "0.9rem", sm: "1rem" } }}>
           AshokVatika is a trusted nursery plantation firm dedicated to bringing lush greenery
           to homes, offices, and landscapes. With a wide variety of indoor and outdoor plants,
           personalized care guidance, and years of experience, we help you grow your green space.
@@ -57,22 +70,20 @@ const Home = () => {
       </Container>
 
       {/* Owner's Details Section */}
-      <Container sx={{ py: 6 }}>
+      <Container sx={{ py: { xs: 4, sm: 6 } }}>
         <Typography variant="h5" gutterBottom>
           Company Details
         </Typography>
 
-        <Paper sx={{ padding: 3 }}>
+        <Paper sx={{ padding: { xs: 2, sm: 3 } }}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
-              <Typography variant="body1">
-                AshokVatika Green Services
-              </Typography>
+              <Typography variant="body1">AshokVatika Green Services</Typography>
               <Typography variant="body1">
                 <strong>Email:</strong>{" "}
                 <a
                   href="mailto:ashok.kumar@ashokvatika.com"
-                  style={{ color: "#1976d2", textDecoration: "none" }}
+                  style={{ color: "#1976d2", textDecoration: "none", wordBreak: "break-word" }}
                 >
                   ashokvatika.green.services@gmail.com
                 </a>

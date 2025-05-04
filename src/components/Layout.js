@@ -1,27 +1,43 @@
 // components/Layout.js
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Outlet, useLocation } from "react-router-dom";
+import { Box, Container } from "@mui/material";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import ServicesFooter from "./ServicesFooter"; // Import the new footer
+import ServicesFooter from "./ServicesFooter";
 
 const Layout = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const location = useLocation();
 
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
 
+  // Check if current route is home
+  const isHomePage = location.pathname === "/";
+
   return (
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Navbar onMenuClick={handleDrawerToggle} />
       <Sidebar open={drawerOpen} onClose={handleDrawerToggle} />
-      <Box sx={{ flexGrow: 1 }}>
-        <Outlet />
+
+      {/* Main Content Area */}
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        {isHomePage ? (
+          // Full-width Hero Page
+          <Outlet />
+        ) : (
+          // Other pages inside a responsive container
+          <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 } }}>
+            <Outlet />
+          </Container>
+        )}
       </Box>
-      <ServicesFooter /> {/* Add this here */}
+
+      {/* Footers */}
+      <ServicesFooter />
       <Footer />
     </Box>
   );
