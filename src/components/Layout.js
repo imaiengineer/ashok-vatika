@@ -5,10 +5,6 @@ import { Box, Container } from "@mui/material";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-<<<<<<< HEAD
-import ServicesFooter from "./ServicesFooter";
-=======
->>>>>>> 4bb602c (change the order)
 
 const Layout = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -40,10 +36,6 @@ const Layout = () => {
       </Box>
 
       {/* Footers */}
-<<<<<<< HEAD
-      <ServicesFooter />
-=======
->>>>>>> 4bb602c (change the order)
       <Footer />
     </Box>
   );
