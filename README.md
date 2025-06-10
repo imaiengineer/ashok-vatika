@@ -68,5 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# gallery feature - 
+ 
+Get API Credentials
+From your Cloudinary Dashboard, note the:
+
+ - CLOUD_NAME
+ - API_KEY
+ - API_SECRET
+
+ Do these changes on ".env " file.
+
 # ashok-watika
 # ashok-watika
+
