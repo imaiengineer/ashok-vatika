@@ -36,7 +36,8 @@ const Gallery = () => {
             <img
               key={index}
               src={url}
-              alt={`Gallery image ${index + 1}`}
+              alt=""
+              aria-hidden = "true"
               style={{ width: '300px', height: 'auto', borderRadius: '8px' }}
             />
           ))
