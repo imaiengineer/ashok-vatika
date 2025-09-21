@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.nav-list-anchor {
+  @apply md:text-xl uppercase text-white md:text-green-500 font-semibold;
+}
+
+.paragraph {
+  @apply text-gray-600 leading-7 tracking-tighter text-xl;
+}
+
+.heading-secondary {
+  @apply text-2xl font-bold text-green-500 uppercase;
+}
+
+.heading-thrice {
+  @apply text-xl font-bold text-green-500 uppercase;
+}
